@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(199, 199, 199); /* Cor de fundo cinza */
+        }
+
+        @keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes rotateAndFade {
+            0% {
+                transform: rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(360deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .animated-image {
+            animation: moveUpDown 2s ease-in-out infinite;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://th.bing.com/th/id/OIP.r-Bp89xQXxULcrPmOMB2vQHaL_?rs=1&pid=ImgDetMain" alt="Animated Image" class="animated-image" onclick="startAnimation()">
+    <script>
+        function startAnimation() {
+            const image = document.querySelector('.animated-image');
+            image.style.animation = 'rotateAndFade 2s ease-in-out forwards';
+
+            setTimeout(() => {
+                window.location.href = 'https://youtu.be/dQw4w9WgXcQ?si=T7EvedHUndsdp-FT';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
